@@ -1,0 +1,19 @@
+label {
+	display: block;
+}
+
+.file-name {
+	max-width: unset;
+	width: 100%;
+	text-align: center;
+}
+
+.title {
+	text-align: center;
+}
+
+#discoveries {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NMS Discovery Viewer</title>
+	<script src="./src/main.ts" type="module"></script>
+</head>
+
+<body>
+	<div class="container">
+		<nav>
+			<a href=".." title="Other pages">&larr; View other pages</a>
+		</nav>
+		<main>
+			<h1 class="title is-3">Discovery Viewer</h1>
+			<section id="input">
+				<div>
+					<div class="file has-name is-boxed">
+						<label class="file-label">
+							<input class="file-input" type="file" id="JSONinput">
+							<span class="file-cta">
+								<span class="file-label">
+									Upload your whole save JSON here
+								</span>
+							</span>
+							<span class="file-name">
+							</span>
+						</label>
+					</div>
+				</div>
+				<p id="warn"></p>
+			</section>
+			<hr>
+			<section id="output">
+				<div id="discoveries"></div>
+			</section>
+		</main>
+	</div>
+</body>
+
+</html>
