@@ -93,19 +93,21 @@ function buildItem(systemObj: SystemDiscoveryEntry, ua: string) {
 		if (typeof value == 'string' || typeof value == 'number') wrapper.appendChild(buildRow(key, value));
 	}
 	wrapper.appendChild(buildRow('UA', ua));
+
+
 	const outputElement = document.getElementById('discoveries')
 	if (outputElement) outputElement.insertAdjacentElement('afterbegin', wrapper);
 
 
 	function buildRow(key: string, value: string | number) {
 		const tr = document.createElement('tr');
-		const headerTd = document.createElement('td');
-		const valueTd = document.createElement('td');
-		tr.appendChild(headerTd);
-		tr.appendChild(valueTd);
+		const header = document.createElement('th');
+		const text = document.createElement('td');
+		tr.appendChild(header);
+		tr.appendChild(text);
 
-		headerTd.innerText = capitalizeFirstLetter(key);
-		valueTd.innerText = value.toString();
+		header.innerText = capitalizeFirstLetter(key);
+		text.innerText = value.toString();
 
 		return tr;
 	}
